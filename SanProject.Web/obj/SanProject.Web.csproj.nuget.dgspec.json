@@ -33,6 +33,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Data\\SanProject.Data.csproj": {
+                "projectPath": "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Data\\SanProject.Data.csproj"
+              },
               "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Shared\\SanProject.Shared.csproj": {
                 "projectPath": "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Shared\\SanProject.Shared.csproj"
               }
@@ -53,6 +56,10 @@
               "target": "Package",
               "version": "[3.2.0, )"
             },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -60,6 +67,10 @@
             "MimeKit": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.11.0, )"
             }
           },
           "imports": [

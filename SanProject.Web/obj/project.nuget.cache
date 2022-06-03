@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ScU7Dy2wutn/l8nu3dmcc8toGccTSKNx0QQarT03MZ8bGePt6e0rW1hgwweOcmArB25LQ2YV5OFcMeyIOIegPg==",
+  "dgSpecHash": "njxbiUWJC7SBx/cUlCY2m0GzxWBDroLfQNHZ3KC1try3q4U2O5Azup2CwcEe/S6h5kQYTgpQOekAOaEaziejAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Web\\SanProject.Web.csproj",
   "expectedPackageFiles": [
@@ -26,7 +26,7 @@
     "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.8\\microsoft.extensions.fileproviders.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\3.1.8\\microsoft.extensions.hosting.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.logging\\3.1.25\\microsoft.extensions.logging.3.1.25.nupkg.sha512",
-    "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.25\\microsoft.extensions.logging.abstractions.3.1.25.nupkg.sha512",
+    "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
     "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\2.0.0\\microsoft.extensions.options.configurationextensions.2.0.0.nupkg.sha512",
     "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
