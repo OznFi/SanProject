@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "SanProject.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SanProject.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SanProject.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SanProject.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SanProject.Domain/SanProject.Domain.csproj",
+      "msbuildProject": "../SanProject.Domain/SanProject.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "SanProject.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ZBOOK 15 G5\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Domain\\SanProject.Domain.csproj": {
+              "projectPath": "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Domain\\SanProject.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

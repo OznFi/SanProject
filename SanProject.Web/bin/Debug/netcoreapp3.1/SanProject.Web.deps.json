@@ -1618,6 +1618,9 @@
         }
       },
       "SanProject.Shared/1.0.0": {
+        "dependencies": {
+          "SanProject.Domain": "1.0.0"
+        },
         "runtime": {
           "SanProject.Shared.dll": {}
         },

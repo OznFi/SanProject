@@ -8,3 +8,6 @@ C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Shared\obj\Debug\netco
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Shared\obj\Debug\netcoreapp3.1\SanProject.Shared.csproj.CoreCompileInputs.cache
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Shared\obj\Debug\netcoreapp3.1\SanProject.Shared.dll
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Shared\obj\Debug\netcoreapp3.1\SanProject.Shared.pdb
+C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Shared\bin\Debug\netcoreapp3.1\SanProject.Domain.dll
+C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Shared\bin\Debug\netcoreapp3.1\SanProject.Domain.pdb
+C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Shared\obj\Debug\netcoreapp3.1\SanProject.Shared.csproj.CopyComplete

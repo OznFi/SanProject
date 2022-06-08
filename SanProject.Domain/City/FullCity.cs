@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SanProject.Domain
+namespace SanProject.Domain.City
 {
 
         public class Body

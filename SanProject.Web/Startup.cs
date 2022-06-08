@@ -38,6 +38,7 @@ namespace SanProject.Web
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<IUsersService, UsersService>();
             services.AddTransient<ICitySearchService, CitySearchService>();
+            services.AddTransient<IHotelService, HotelService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

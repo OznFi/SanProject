@@ -4,6 +4,7 @@ using SanProject.Application.Models;
 using SanProject.Application.Services.Interfaces;
 using SanProject.Data;
 using SanProject.Domain;
+using SanProject.Domain.City;
 using Serilog;
 using System;
 using System.Collections.Generic;

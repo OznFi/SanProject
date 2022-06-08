@@ -262,7 +262,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Domain\\SanProject.Domain.csproj": {
+                "projectPath": "C:\\Users\\ZBOOK 15 G5\\Desktop\\mvcday\\SanProject\\SanProject.Domain\\SanProject.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
