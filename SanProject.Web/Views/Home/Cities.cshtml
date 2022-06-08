@@ -1,0 +1,31 @@
+﻿@model List<SanProject.Domain.CityObject>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Cities</h1>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>City Name</th>
+            <th>Number of Hotels</th>
+            <th>View Hotels</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in Model)
+        {
+            <tr>
+                <td>@city.Name</td>
+                <td>@city.HotelCount</td>
+                <td>
+                    <a asp-controller="Nutritionist" asp-action="Edit" asp-route-id="@city.Name">Düzenle</a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

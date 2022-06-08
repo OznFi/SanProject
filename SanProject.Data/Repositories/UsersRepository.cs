@@ -9,7 +9,7 @@ namespace SanProject.Data.Repositories
 {
     public class UsersRepository : Repository<User>, IUsersRepository
     {
-        public UsersRepository(SanProjectDBContext context) : base(context)
+        public UsersRepository(SanProjectDBContext dBContext) : base(dBContext)
         {
 
         }
@@ -18,7 +18,19 @@ namespace SanProject.Data.Repositories
         {
             return _context.Users.ToList();
         }
+        public User FindUser(int id)
+        {
+            return _context.Users.SingleOrDefault(x => x.Id == id);
+        }
+        public void ActivateUser(User user)
+        {
 
+            _context.Update(user);
+        }
+        public void SoftDeleteUser(User user)
+        {
+            _context.Update(user);
+        }
 
     }
 }

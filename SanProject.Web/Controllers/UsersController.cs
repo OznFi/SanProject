@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using SanProject.Application.Services;
+using SanProject.Application.Services.Interfaces;
 using SanProject.Data;
 using SanProject.Domain;
 using SanProject.Web.Models;
@@ -13,64 +15,70 @@ namespace SanProject.Web.Controllers
     {
 
         public SanProjectDBContext _context;
-        public UsersController(SanProjectDBContext context)
+        public readonly IUnitOfWork _unitofwork;
+        public readonly IUsersService _userservice;
+
+        public UsersController(IUnitOfWork unitofwork, SanProjectDBContext context, IUsersService userservice)
         {
+            _unitofwork = unitofwork;
             _context = context;
+            _userservice = userservice;
         }
         public IActionResult Index()
         {
-            return View();
-        }
-        public IActionResult ViewUsers()
-        {
-            var users= _context.Users.ToList();
+            var users = _unitofwork.UsersRepository.GetUsers();
             return View(users);
         }
+
+        public IActionResult Edit(int id)
+        {
+            User us = _unitofwork.UsersRepository.FindUser(id);
+            if(us!=null)
+                return View(us);
+            return BadRequest("User is not found");
+        }
+
         [HttpPut]
-        public IActionResult ActivateUser(User user)
+        public IActionResult ActivateUser(int id)
         {
             if (ModelState.IsValid)
             {
-                bool stat = user.IsActive;
-                user.IsActive = !stat;
-                _context.SaveChanges();
-                return Ok();
+                //bool stat = user.IsActive;
+                //user.IsActive = !stat;
+                //_context.SaveChanges();
+                _userservice.ActivateUser(id);
+                return RedirectToAction("Index");
             }
+            
             return BadRequest();
             
         }
-        [HttpDelete]
-        public IActionResult SoftDelete(User user)
+        //[HttpDelete]
+        public IActionResult SoftDelete(int id)
         {
-            if (ModelState.IsValid)
-            {
-                user.IsDeleted = true;
-                _context.SaveChanges();
-                return Ok();
-            }
-            return BadRequest();
+            User user=_unitofwork.UsersRepository.FindUser(id);
+               
+                //user.IsDeleted = true;
+                //_context.SaveChanges();
+                _userservice.SoftDelete(user);
+                return RedirectToAction("Index");
+            
+            
         }
         public IActionResult Registration()
         {
+            
             return View();
         }
         [HttpPost]
         public IActionResult Registration(User user)
         {
-            if (ModelState.IsValid)
-            {
-                user.RegistryDate = DateTime.Now;
-                user.IsActive = true;
-                /*do unit of work here
-                 
-                 */
-                /*send email to user*/
+            
+           _userservice.AddUser(user);
 
-                _context.Users.Add(user);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return BadRequest();
+           return RedirectToAction("Index");
+            
+           // return BadRequest();
         }
 
         //might be placed onto some other Page

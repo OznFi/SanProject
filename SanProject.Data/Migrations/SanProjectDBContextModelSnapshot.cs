@@ -19,6 +19,24 @@ namespace SanProject.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("SanProject.Domain.Token", b =>
+                {
+                    b.Property<int>("tokenId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("expires")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("tokenId");
+
+                    b.ToTable("Tokens");
+                });
+
             modelBuilder.Entity("SanProject.Domain.User", b =>
                 {
                     b.Property<int>("Id")

@@ -32,8 +32,12 @@ namespace SanProject.Web
             services.AddDbContext<SanProjectDBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-            services.AddScoped<IEmailService, FakeEmailService>();
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<IAuthenticationService, AuthenticationService>();
+            services.AddTransient<IUsersService, UsersService>();
+            services.AddTransient<ICitySearchService, CitySearchService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

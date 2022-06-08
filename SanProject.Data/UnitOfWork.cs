@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using SanProject.Data.Repositories;
+using SanProject.Data.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,17 +9,17 @@ namespace SanProject.Data
 {
     public interface IUnitOfWork : IDisposable
     {
-        public UsersRepository _userrepository { get; }
+        public IUsersRepository UsersRepository { get; }
         void Complete();
     }
     public  class UnitOfWork : IUnitOfWork
     {
         public readonly SanProjectDBContext _context;
-        public UsersRepository _userrepository { get; private set; }
-        public UnitOfWork(SanProjectDBContext context, UsersRepository userrepository)
+        public IUsersRepository UsersRepository { get; private set; }
+        public UnitOfWork(SanProjectDBContext context)
         {
             _context=context;
-            _userrepository=userrepository;
+            UsersRepository = new UsersRepository(context);
         }
 
         public void Complete()

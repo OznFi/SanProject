@@ -1,0 +1,43 @@
+﻿@model SanProject.Domain.User
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post" >
+    <h1>"Diyetisyen Oluştur"</h1>
+    <div asp-validation-summary="All"></div>
+
+    <div class="girisalani">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    
+    <div class="girisalani">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+
+    </div>
+    <div class="girisalani">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+
+    </div>
+
+    
+   
+    
+    <button type="submit" class="kaydetmeButonu">Kaydet</button>
+    <button type="reset" class="kaydetmeButonu">Reset</button>
+    <a asp-controller="Users" asp-action="Index">Listeye geri dön</a>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}

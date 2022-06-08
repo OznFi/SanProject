@@ -25,28 +25,69 @@ namespace SanProject.Application.Services
 
         public async Task AddUser(User user)
         {
-            _unitofwork._userrepository.Add(user);
+            
+            user.RegistryDate = DateTime.Now;
+            user.IsActive = true;
+            _unitofwork.UsersRepository.Add(user);
             MailRequest mail = new MailRequest()
             {
                 Body = "Kaydiniz yapildi",
                 Subject = "Otel user kayit",
                 ToEmail = ""
             };
-            await _emailService.SendEmailAsync(mail);
+            //await _emailService.SendEmailAsync(mail);
 
             _unitofwork.Complete();
             _logger.LogInformation("{@user} kaydedildi", user);
         }
-        public async Task DeleteUser(User user)
+        /*public async Task ActivateUsers(int id)
         {
-            _unitofwork._userrepository.Remove(user);
+            User us = _unitofwork.UsersRepository.FindUser(id);
+            //if (us == null)
+            //{
+            //return null;
+            //}
+
+            bool act = us.IsActive;
+            us.IsActive = !act;
+            _unitofwork.UsersRepository.ActivateUser(us);
             _unitofwork.Complete();
-            _logger.LogInformation("{@user} silindi", user);
+            _logger.LogInformation("{@id} numarali user aktifligi degistirildi", id);
             await Task.CompletedTask;
-        }
+
+        }*/
         public async Task EditUser()
         {
             //add editing
+        }
+
+
+        public async Task DeleteUser(int id)
+        {
+            User us = _unitofwork.UsersRepository.FindUser(id);
+            _unitofwork.UsersRepository.Remove(us);
+            _unitofwork.Complete();
+            _logger.LogInformation("{@us} silindi", us);
+            await Task.CompletedTask;
+        }
+        public async Task SoftDelete(User us)
+        {
+            //User us = _unitofwork.UsersRepository.FindUser(id);
+            us.IsDeleted = !us.IsDeleted;
+            _unitofwork.UsersRepository.SoftDeleteUser(us);
+            _unitofwork.Complete();
+            _logger.LogInformation("{@us} soft silindi", us);
+        }
+        public async Task ActivateUser(int id)
+        {
+            User us = _unitofwork.UsersRepository.FindUser(id);
+            bool act = us.IsActive;
+            us.IsActive = !act;
+            _unitofwork.UsersRepository.ActivateUser(us);
+            _unitofwork.Complete();
+            _logger.LogInformation("{@id} numarali user aktifligi degistirildi", id);
+            await Task.CompletedTask;
+
         }
     }
 }
