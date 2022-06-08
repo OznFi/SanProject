@@ -70,6 +70,7 @@ namespace SanProject.Application.Services
             }
             return conten;
         }
+        //there is a bit of redundancy but is needed at the moment
         public async Task<List<HotelObject>> CityHotelSearch(string querys)
         {
             if (tokne == null)
@@ -97,7 +98,7 @@ namespace SanProject.Application.Services
             {
                 for (int i = 0; i < t.Count; i++)
                 {
-                    if ((t[i].hotelCount == 0 || t[i].hotelCount == null))
+                    if ((t[i].hotelCount == 0 || t[i].hotelCount == null)&&t[i].city.name==querys)
                     {
                         HotelObject c = new HotelObject(); c.HotelName = t[i].hotel.name;c.HotelId = t[i].hotel.id;
                         if (!conten.Contains(c))
