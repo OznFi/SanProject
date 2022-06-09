@@ -103,3 +103,4 @@ C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcorea
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Users\Registration.cshtml.g.cs
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cities.cshtml.g.cs
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Index.cshtml.g.cs
+C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\HotelDetail.cshtml.g.cs

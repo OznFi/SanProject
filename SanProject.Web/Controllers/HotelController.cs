@@ -37,7 +37,12 @@ namespace SanProject.Web.Controllers
         public async Task<IActionResult> HotelDetail(string id)
         {
             HotelDetailDTO dt = await _hotelservice.GetDetails(id);
-            return Ok(dt);
+            if (dt == null)
+            {
+                //return View("~/Views/SpecificView.cshtml");
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+            return View(dt);
         }
 
 

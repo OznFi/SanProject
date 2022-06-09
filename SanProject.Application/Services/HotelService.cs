@@ -72,15 +72,23 @@ namespace SanProject.Application.Services
             var contents = await req.Content.ReadAsStringAsync();
             Root obj = JsonConvert.DeserializeObject<Root>(contents);
             HotelDetailDTO t = new HotelDetailDTO();
-            Hotel hotelobj = obj.body.hotels[0];
+            Hotel hotelobj=new Hotel();
+            //try
+            if (obj.body == null)
+            {
+                return null;
+            }
+            //{
+            hotelobj = obj.body.hotels[0];
+            //}
             //why list?
             t.name = hotelobj.name; t.description = hotelobj.description; t.price = hotelobj.offers[0].price;
-            t.rating = hotelobj.rating; t.rooms = hotelobj.offers[0].rooms; t.locationName = hotelobj.location.name;
+            t.rating = Math.Round(hotelobj.rating,1); t.rooms = hotelobj.offers[0].rooms; t.locationName = hotelobj.location.name;
             t.cancellationDueDate = hotelobj.offers[0].cancellationPolicies[0].dueDate;
             t.cancellationPrice = hotelobj.offers[0].cancellationPolicies[0].price.amount;
             t.cancellationCurrency = hotelobj.offers[0].cancellationPolicies[0].price.currency;
             t.offerId = hotelobj.offers[0].offerId; t.offerCheckIn = hotelobj.offers[0].checkIn;
-            t.address = hotelobj.address; t.hotelCategory = hotelobj.hotelCategory; t.thumbnail = hotelobj.thumbnail;
+            t.address = hotelobj.address; t.hotelCategory = hotelobj.hotelCategory; t.thumbnail = hotelobj.thumbnailFull;
 
             return t;
 
