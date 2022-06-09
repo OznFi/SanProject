@@ -17,6 +17,7 @@ using SanProject.Domain.Booking;
 using SanProject.Domain.SetReservation;
 using SanProject.Shared.BookingModels;
 using SanProject.Domain.SetReservation.Reponse;
+using SanProject.Domain.CommitReservation;
 
 namespace SanProject.Application.Services
 {
@@ -109,8 +110,21 @@ namespace SanProject.Application.Services
 
         public async Task<string> CommitReservation(string transactid)
         {
-
-            return null;
+            var searchobj = new
+            {
+                TransactionId=transactid
+            };
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokne);
+            var content = JsonConvert.SerializeObject(searchobj);
+            var buffer = System.Text.Encoding.UTF8.GetBytes(content);
+            var byteContent = new ByteArrayContent(buffer);
+            var req = await client.PostAsync("http://service.stage.paximum.com/v2/api/bookingservice/setreservationinfo", byteContent);
+            var contents = await req.Content.ReadAsStringAsync();
+            ReservationCommitRoot obj= JsonConvert.DeserializeObject<ReservationCommitRoot>(contents);
+            return obj.body.reservationNumber;
         }
+
+
     }
 }
