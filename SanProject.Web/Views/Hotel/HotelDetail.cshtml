@@ -26,5 +26,5 @@
     <div class="hotel_price">
         <span>@(Model.price.amount+Model.price.currency)</span>
     </div>
-    <a asp-controller="Hotel" asp-action="Book" asp-route-offerid=@Model.offerId asp-route-currency=@Model.price.currency>Reservasyon</a>
+    <a asp-controller="Booking" asp-action="Index" asp-route-offid=@Model.offerId asp-route-currenc=@Model.price.currency asp-route-travnum=@Model.travellernum>Reservation</a>
 </div>

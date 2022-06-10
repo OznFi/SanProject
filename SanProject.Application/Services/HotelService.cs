@@ -34,7 +34,7 @@ namespace SanProject.Application.Services
 
         }
         //for get /pricesearch
-        public async Task<HotelDetailDTO> GetDetails(string querys)
+        public async Task<HotelDetailDTO> GetDetails(string querys, int adultnum)
         {
             if (tokne == null)
             {
@@ -62,7 +62,7 @@ namespace SanProject.Application.Services
                 culture= "en-US"
             };*/
             RootQ searchobj = new RootQ();
-            searchobj.Products.Add(querys);
+            searchobj.Products.Add(querys); searchobj.roomCriteria[0].adult = adultnum;
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokne);
             var content = JsonConvert.SerializeObject(searchobj);
@@ -89,7 +89,7 @@ namespace SanProject.Application.Services
             t.cancellationCurrency = hotelobj.offers[0].cancellationPolicies[0].price.currency;
             t.offerId = hotelobj.offers[0].offerId; t.offerCheckIn = hotelobj.offers[0].checkIn;
             t.address = hotelobj.address; t.hotelCategory = hotelobj.hotelCategory; t.thumbnail = hotelobj.thumbnailFull;
-
+            t.travellernum = hotelobj.offers[0].rooms[0].travellers.Count;
             return t;
 
             //List<Item> t = obj.body.items;

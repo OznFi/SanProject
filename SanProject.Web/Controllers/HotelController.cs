@@ -34,9 +34,16 @@ namespace SanProject.Web.Controllers
             return View(t);
         }
 
-        public async Task<IActionResult> HotelDetail(string id)
+        public async Task<IActionResult> NumberofTravelers(string id)
         {
-            HotelDetailDTO dt = await _hotelservice.GetDetails(id);
+            HotelQueryDTO a=new HotelQueryDTO();
+            a.HotelId = id;
+            a.NumberOfTravellers = 1;
+            return View(a);
+        }
+        public async Task<IActionResult> HotelDetail(HotelQueryDTO dto)
+        {
+            HotelDetailDTO dt = await _hotelservice.GetDetails(dto.HotelId, dto.NumberOfTravellers);
             if (dt == null)
             {
                 //return View("~/Views/SpecificView.cshtml");

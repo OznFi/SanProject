@@ -23,5 +23,6 @@ namespace SanProject.Shared.HotelModels
         public HotelCategory hotelCategory { get; set; }
         public string thumbnail { get; set; }
         public Description description { get; set; }
+        public int travellernum { get; set; }
     }
 }
