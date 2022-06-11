@@ -4,11 +4,12 @@
 *@
 @{
 }
-
-<form method="get" asp-action="HotelDetail">
-    <label asp-for=HotelId></label>
-    <input readonly  asp-for=HotelId></input>
-    <label asp-for=NumberOfTravellers>Number of Users</label>
-    <input type="number"  asp-for=NumberOfTravellers></input>
-    <button type="submit" class="kaydetmeButonu">Submit</button>
-</form>
+<div>
+    <form method="get" asp-action="HotelDetail">
+        <label readonly asp-for=HotelId></label>
+        <input readonly  asp-for=HotelId></input>
+        <label asp-for=NumberOfTravellers>Number of Users</label>
+        <input type="number"  asp-for=NumberOfTravellers></input>
+        <button type="submit" class="kaydetmeButonu">Submit</button>
+    </form>
+</div>

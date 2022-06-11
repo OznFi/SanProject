@@ -31,6 +31,9 @@ namespace SanProject.Data.Repositories
         {
             _context.Update(user);
         }
-
+        public void EditUser(User user)
+        {
+            _context.Update(user);
+        }
     }
 }

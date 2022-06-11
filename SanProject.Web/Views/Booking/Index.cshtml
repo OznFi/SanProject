@@ -7,16 +7,19 @@
 @{
 }
 <div>
+    <h3>Enter Required Traveller Info</h3>
     <form method="post" asp-action="Booking">
     @for(int i=0; i<Model.travellernumber;i++)
     {
-        <div>
-            <span>@Model.currency</span>
-            <input  readonly asp-for=@Model.offerId value=@Model.offerId><input/>
-            <input readonly asp-for=@Model.currency value=@Model.currency><input/>
-            <input readonly asp-for=@Model.culture value=@Model.culture><input/>
+        <div class="traveller_form_field">
+            <input type="hidden" readonly asp-for=@Model.offerId value=@Model.offerId>
+            <input type="hidden" readonly asp-for=@Model.currency value=@Model.currency>
+            <input type="hidden" readonly asp-for=@Model.culture value=@Model.culture>
+            <label asp-for=@Model.travellers[i].name></label>
             <input asp-for=@Model.travellers[i].name></input>
+            <label asp-for=@Model.travellers[i].surname></label>
             <input asp-for=@Model.travellers[i].surname></input>
+            <label asp-for=@Model.travellers[i].address.email></label>
             <input asp-for=@Model.travellers[i].address.email></input>
         </div>
         

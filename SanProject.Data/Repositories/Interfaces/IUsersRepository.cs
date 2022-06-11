@@ -9,5 +9,6 @@ namespace SanProject.Data.Repositories.Interfaces
         User FindUser(int id);
         void ActivateUser(User user);
         void SoftDeleteUser(User user);
+        void EditUser(User user);
     }
 }

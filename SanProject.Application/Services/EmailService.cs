@@ -30,7 +30,7 @@ namespace SanProject.Application.Services
                 Body = builder.ToMessageBody()
             };
             email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));
-            email.From.Add(MailboxAddress.Parse("DiyetisyeniSec"));
+            email.From.Add(MailboxAddress.Parse(_mailsettings.Mail));
             using var smtp = new SmtpClient();
             smtp.Connect(_mailsettings.Host, _mailsettings.Port, SecureSocketOptions.StartTls);
             smtp.Authenticate(_mailsettings.Mail, _mailsettings.Password);

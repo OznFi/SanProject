@@ -21,13 +21,15 @@ namespace SanProject.Application.Services
         public string tokne { get; set; }
         private readonly ILogger<UsersService> _logger;
         public readonly IAuthenticationService _authenticationService;
+        public readonly IHotelService _hotelservice;
         public CitySearchService(IUnitOfWork unitofwork, IEmailService emailservice,
-            ILogger<UsersService> logger, IAuthenticationService authenticationService)
+            ILogger<UsersService> logger, IAuthenticationService authenticationService, IHotelService hotelservice)
         {
             _unitofwork = unitofwork;
             _emailService = emailservice; ;
             _logger = logger;
             _authenticationService = authenticationService;
+            _hotelservice = hotelservice;
 
         }
 
@@ -102,10 +104,15 @@ namespace SanProject.Application.Services
                     if ((t[i].hotelCount == 0 || t[i].hotelCount == null)&&t[i].city.name==querys)
                     {
                         HotelObject c = new HotelObject(); c.HotelName = t[i].hotel.name;c.HotelId = t[i].hotel.id;
-                        if (!conten.Contains(c))
-                        {
-                            conten.Add(c);
-                        }
+                        //var ch = await _hotelservice.GetDetailsTest(c.HotelId, 1);
+                        //if (ch !=null)
+                        //{
+                            if (!conten.Contains(c))
+                            {
+                                conten.Add(c);
+                            }
+                        //}
+                        
 
                     }
                 }

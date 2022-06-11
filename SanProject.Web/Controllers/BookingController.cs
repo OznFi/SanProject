@@ -38,13 +38,13 @@ namespace SanProject.Web.Controllers
         }
         public IActionResult Index(string offid, string currenc, int travnum)
         {
-            
+
             currency = currenc;
             var rqf = Request.HttpContext.Features.Get<IRequestCultureFeature>();
             //culture = rqf.RequestCulture.Culture.ToString();
             //List<SanProject.Domain.SetReservation.Traveller> tra;
             //tra.Count = travnum;
-            BookingFormsViewModel m=new BookingFormsViewModel();
+            BookingFormsViewModel m = new BookingFormsViewModel();
             m.travellers = new List<Domain.SetReservation.Traveller>();
             for (int i = 0; i < travnum; i++)
             {
@@ -56,7 +56,7 @@ namespace SanProject.Web.Controllers
             m.culture = "en-US";
             return View(m);
         }
-
+        [Route("BookingDetails")]
         public async Task<IActionResult> Booking(BookingFormsViewModel model)
         {
             List<SanProject.Domain.SetReservation.Traveller> travls = model.travellers;
@@ -68,7 +68,7 @@ namespace SanProject.Web.Controllers
                 }
             }
             ReservationDetailDTO res = await _bookingservice.FullBooking(model.offerId, model.currency, model.culture, travls);
-            return Ok(res);
+            return View(res);
         }
 
     }

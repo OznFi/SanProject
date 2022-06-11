@@ -7,8 +7,8 @@ namespace SanProject.Application.Services.Interfaces
     {
         Task AddUser(User user);
         Task DeleteUser(int id);
-        Task EditUser();
         Task ActivateUser(int id);
         Task SoftDelete(User us);
+        Task EditUser(User us);
     }
 }

@@ -21,7 +21,7 @@
         <span>Offer check-in : @(Model.offerCheckIn.ToShortDateString())</span>
     </div>
     <div class="hotel_description">
-        <span>@Model.description</span>
+        <span>@Model.description.text</span>
     </div>
     <div class="hotel_price">
         <span>@(Model.price.amount+Model.price.currency)</span>

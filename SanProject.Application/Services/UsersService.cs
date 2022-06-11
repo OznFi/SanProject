@@ -33,9 +33,9 @@ namespace SanProject.Application.Services
             {
                 Body = "Kaydiniz yapildi",
                 Subject = "Otel user kayit",
-                ToEmail = ""
+                ToEmail = user.Email
             };
-            //await _emailService.SendEmailAsync(mail);
+            await _emailService.SendEmailAsync(mail);
 
             _unitofwork.Complete();
             _logger.LogInformation("{@user} kaydedildi", user);
@@ -56,8 +56,12 @@ namespace SanProject.Application.Services
             await Task.CompletedTask;
 
         }*/
-        public async Task EditUser()
+        public async Task EditUser(User us)
         {
+            
+            _unitofwork.UsersRepository.EditUser(us);
+            _unitofwork.Complete();
+            _logger.LogInformation("{@us} updated", us);
             //add editing
         }
 

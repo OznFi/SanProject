@@ -6,13 +6,23 @@
 }
 
 <form method="post" asp-action="Edit">
-    <h1>"Diyetisyen Oluştur"</h1>
+    <h1>"Edit User"</h1>
     <div asp-validation-summary="All"></div>
 
+    <div class="girisalani">
+        <label asp-for="Id"></label>
+        <input readonly asp-for="Id" />
+        <span asp-validation-for="Id"></span>
+    </div>
     <div class="girisalani">
         <label asp-for="Name"></label>
         <input asp-for="Name" />
         <span asp-validation-for="Name"></span>
+    </div>
+    <div class="girisalani">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
     </div>
     
     <div class="girisalani">
@@ -24,7 +34,7 @@
 
     <div class="girisalani">
         <label asp-for="RegistryDate"></label>
-        <input disabled asp-for="RegistryDate" />
+        <input readonly asp-for="RegistryDate" />
         <span asp-validation-for="RegistryDate"></span>
 
     </div>
@@ -40,9 +50,9 @@
         <span asp-validation-for="IsDeleted"></span>
 
     </div>
-    <button type="submit" class="kaydetmeButonu">Kaydet</button>
+    <button type="submit" class="kaydetmeButonu">Save</button>
     <button type="reset" class="kaydetmeButonu">Reset</button>
-    <a asp-controller="Nutritionist" asp-action="Index">Listeye geri dön</a>
+    <a asp-controller="Users" asp-action="Index">Back To User List</a>
 </form>
 
 @section Scripts{

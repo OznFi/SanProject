@@ -8,5 +8,6 @@ namespace SanProject.Application.Services.Interfaces
         string tokne { get; set; }
 
         Task<HotelDetailDTO> GetDetails(string querys, int adultnum);
+        Task<HotelDetailDTO> GetDetailsTest(string query, int adultnum);
     }
 }

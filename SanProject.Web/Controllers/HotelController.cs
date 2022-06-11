@@ -34,19 +34,27 @@ namespace SanProject.Web.Controllers
             return View(t);
         }
 
+
         public async Task<IActionResult> NumberofTravelers(string id)
         {
+            
             HotelQueryDTO a=new HotelQueryDTO();
             a.HotelId = id;
             a.NumberOfTravellers = 1;
+            HotelDetailDTO dt = await _hotelservice.GetDetails(a.HotelId, a.NumberOfTravellers);
+            if (dt == null)
+            {
+                //return View("~/Views/SpecificView.cshtml");
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
             return View(a);
         }
         public async Task<IActionResult> HotelDetail(HotelQueryDTO dto)
         {
             HotelDetailDTO dt = await _hotelservice.GetDetails(dto.HotelId, dto.NumberOfTravellers);
+            //HotelDetailDTO dt = await _hotelservice.GetDetails(dt.HotelId, dt.NumberOfTravellers);
             if (dt == null)
             {
-                //return View("~/Views/SpecificView.cshtml");
                 return Redirect(Request.Headers["Referer"].ToString());
             }
             return View(dt);

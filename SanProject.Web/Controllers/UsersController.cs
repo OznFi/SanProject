@@ -8,6 +8,7 @@ using SanProject.Web.Models;
 using System;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace SanProject.Web.Controllers
 {
@@ -37,7 +38,15 @@ namespace SanProject.Web.Controllers
                 return View(us);
             return BadRequest("User is not found");
         }
-
+        [HttpPost]
+        public IActionResult Edit(User us)
+        {
+            
+            if (us != null)
+                _userservice.EditUser(us);
+                return RedirectToAction("Index");
+            return BadRequest("User is not found");
+        }
         [HttpPut]
         public IActionResult ActivateUser(int id)
         {
@@ -71,10 +80,10 @@ namespace SanProject.Web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Registration(User user)
+        public async Task<IActionResult> Registration(User user)
         {
             
-           _userservice.AddUser(user);
+           await _userservice.AddUser(user);
 
            return RedirectToAction("Index");
             
