@@ -41,9 +41,6 @@ namespace SanProject.Web.Controllers
 
             currency = currenc;
             var rqf = Request.HttpContext.Features.Get<IRequestCultureFeature>();
-            //culture = rqf.RequestCulture.Culture.ToString();
-            //List<SanProject.Domain.SetReservation.Traveller> tra;
-            //tra.Count = travnum;
             BookingFormsViewModel m = new BookingFormsViewModel();
             m.travellers = new List<Domain.SetReservation.Traveller>();
             for (int i = 0; i < travnum; i++)

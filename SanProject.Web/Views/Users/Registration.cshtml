@@ -5,22 +5,22 @@
 @{
 }
 <form method="post" >
-    <h1>"User Olusturun"</h1>
+    <h1>"User Registration"</h1>
     <div asp-validation-summary="All"></div>
 
-    <div class="girisalani">
+    <div class="user_register_inputfield">
         <label asp-for="Name"></label>
         <input asp-for="Name" />
         <span asp-validation-for="Name"></span>
     </div>
     
-    <div class="girisalani">
+    <div class="user_register_inputfield">
         <label asp-for="Password"></label>
         <input asp-for="Password" />
         <span asp-validation-for="Password"></span>
 
     </div>
-    <div class="girisalani">
+    <div class="user_register_inputfield">
         <label asp-for="Email"></label>
         <input asp-for="Email" />
         <span asp-validation-for="Email"></span>
@@ -29,10 +29,11 @@
 
     
    
-    
-    <button type="submit" class="kaydetmeButonu">Kaydet</button>
-    <button type="reset" class="kaydetmeButonu">Reset</button>
-    <a asp-controller="Users" asp-action="Index">Listeye geri dön</a>
+    <div id="user_register_buttonfield">
+        <button type="submit" class="kaydetmeButonu">Register</button>
+        <button type="reset" class="kaydetmeButonu">Reset</button>
+    </div>
+    <a asp-controller="Users" asp-action="Index">Go Back To Users</a>
 </form>
 
 @section Scripts{

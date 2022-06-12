@@ -6,7 +6,7 @@
 @{
 }
 <div id="user_info_tablediv">
-<table>
+<table id="users_table">
     <thead>
         <tr>
             <th>User Name</th>
@@ -22,9 +22,20 @@
             <tr>
                 <td>@user.Name</td>
                 <td>@user.Email</td>
-                <td>@user.RegistryDate</td>
-                <td>@user.IsActive</td>
-                <td>@user.IsDeleted</td>
+                <td>@user.RegistryDate.ToShortDateString()</td>
+                @if(user.IsActive){
+                    <td class="active_user">Yes</td>
+                }
+                else{
+                    <td class="inactive_user">No</td>
+                }
+                @if(!user.IsDeleted){
+                    <td class="active_user">No</td>
+                }
+                else{
+                    <td class="inactive_user">Yes</td>
+                }
+                
                 <td>
                     <a asp-action="Edit" asp-route-id=@user.Id >Edit</a>
                 </td>

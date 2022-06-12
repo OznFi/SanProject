@@ -4,12 +4,15 @@
 *@
 @{
 }
-<div>
+<div id="traveller_number_container">
+    <h3>Enter The Number Of Travellers</h3>
     <form method="get" asp-action="HotelDetail">
-        <label readonly asp-for=HotelId></label>
-        <input readonly  asp-for=HotelId></input>
-        <label asp-for=NumberOfTravellers>Number of Users</label>
-        <input type="number"  asp-for=NumberOfTravellers></input>
-        <button type="submit" class="kaydetmeButonu">Submit</button>
+        <div id="traveller_number_inputdiv">
+            <input type="hidden" readonly  asp-for=HotelId></input>
+            <label asp-for=NumberOfTravellers>Number of Travellers</label>
+            <input min="1" type="number"  asp-for=NumberOfTravellers></input>
+            <button type="submit" class="kaydetmeButonu">Submit</button>
+       </div>
+        
     </form>
 </div>

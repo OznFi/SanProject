@@ -70,18 +70,140 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
-
-#user_info_tablediv {
-    margin-right:auto;
+#cities_tablediv {
     margin-left:auto;
+    margin-right:auto;
+}#cities_tablediv table {
+     border-spacing:5px;
+ }
+ table td{
+     margin-right:20px;
+ }
+#users_table th {
+    width: 15%;
+}
+#cities_table th{
+    width:10%;
+}
+td {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+    td:first-child {
+        padding-left: 0;
+    }
+
+    td:last-child {
+        padding-right: 0;
+    }
+
+table {
+    border-spacing: 30px 0px;
+}
+#full_hotel_detaildiv {
+    /*
+    background-color:dodgerblue; width:100%;
+    z-index:0;height:100vh;
+    padding-left:10px; padding-right:10px;*/
+}
+#full_hotel_detaildiv img{
+    max-width:500px;
+}
+#hotel_detaildiv {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;
+    border-left: solid 1px rgb(128, 128, 128, 0.4);
+    border-right: solid 1px rgb(128, 128, 128, 0.4);*/
+    /*z-index:1; background-color:white;
+    width:70%;min-width:500px;
+    height:100%;*/
+}
+#hotel_detaildiv h1{
+    color:Highlight;
+}
+#hotel_detaildiv > div{
+    margin-top:5px;margin-bottom:10px;
+}
+.make_reservation_anchor{
+    display:flex; align-items:end; justify-content:end;
+    padding-right:10%; 
+    font-weight:600;
+    font-size:18px; 
+    color:royalblue;
+}
+.hotel_detail_info_title {
+    color: mediumblue;
+    font-weight: 600;
+}
+.currency_span {
+    font-weight: 600;
+    color: forestgreen;
+}
+.Scores {
+    margin-top: 12px;
+}
+#traveller_number_container {
+    width: 500px; margin-right:auto; margin-left:auto;
+    border-left: solid 1px rgb(128, 128, 128, 0.4);
+    border-right: solid 1px rgb(128, 128, 128, 0.4);
+    padding: 15px;
+}
+#traveller_number_container h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+#traveller_number_inputdiv {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column; align-items:center;
+    width: 150px;
+}
+#traveller_number_inputdiv button{
+    margin:10px;
+    width:100px;
+}
+#traveller_formsdiv{
+    margin-right:auto;margin-left:auto;
+
+}
+.active_user {
+    color: forestgreen;
+}
+.inactive_user {
+    color:red;
+}
+.user_register_inputfield {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+user_register_inputfield label{
+    margin-bottom:2px;
+}
+#user_register_buttonfield {
+    margin-bottom: 10px;
+    display: flex;
+    padding: 3px;
+}
+#user_register_buttonfield button{
+    margin-right:5px;
+}
+#user_info_tablediv {
+    margin-right: auto;
+    margin-left: auto;
 }
 #add_user_anchordiv {
     margin-top: 5px;
     margin-bottom: 15px;
-    /*background-color:rgb(160, 153, 153, 0.2);
-      border: 1px solid rgb(128, 128, 128);
-        border-radius: 1px;
-    */
     padding: 2px;
     max-width: 75px;
     display: flex;
@@ -111,10 +233,13 @@ body {
 }
 .traveller_form_field{
     margin:10px;
+    display:flex;
+    flex-direction:column;
 }
 .traveller_form_field input{
     margin-right:10px;
     margin-bottom:10px;
+    width:150px;
 }
 #traveller_container {
     display: flex !important;

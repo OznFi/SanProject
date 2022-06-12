@@ -68,6 +68,10 @@ namespace SanProject.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Cities(string quer)
         {
+            if((quer==null || quer=="") || quer.Length < 3)
+            {
+                return BadRequest("The City field requires at least 3 characters");
+            }
             List<CityObject> t = await _citysearchservice.Search(quer);
 
             

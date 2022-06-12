@@ -4,27 +4,35 @@
 *@
 @{
 }
-<h1>@Model.name</h1>
-<div>
+<div id="full_hotel_detaildiv">
+    <div id="hotel_detaildiv">
+    <h1>@Model.name</h1>
     <img src=@Model.thumbnail></img>
     <div class="Scores">
          @if (Model.stars > 0)
         {
             <span>@(Model.stars) stars</span>
         }
-        <span>@(Model.rating) Rating</span>
+        @if (Model.rating > 0)
+        {
+            <span>@(Model.rating) Rating</span>
+        }
     </div>
     <div class="locationinfo">
-        <span>@Model.address</span>
+       <span class="hotel_detail_info_title">Address : </span><span>@Model.address</span>
     </div>
     <div>
-        <span>Offer check-in : @(Model.offerCheckIn.ToShortDateString())</span>
+        <span class="hotel_detail_info_title">Offer check-in : </span><span>@(Model.offerCheckIn.ToShortDateString())</span>
     </div>
     <div class="hotel_description">
         <span>@Model.description.text</span>
     </div>
     <div class="hotel_price">
-        <span>@(Model.price.amount+Model.price.currency)</span>
+        <span>@(Model.price.amount)</span><span class="currency_span"> @Model.price.currency</span>
     </div>
-    <a asp-controller="Booking" asp-action="Index" asp-route-offid=@Model.offerId asp-route-currenc=@Model.price.currency asp-route-travnum=@Model.travellernum>Reservation</a>
+    <div class="make_reservation_anchor">
+            <a asp-controller="Booking" asp-action="Index" asp-route-offid=@Model.offerId asp-route-currenc=@Model.price.currency asp-route-travnum=@Model.travellernum>Make Reservation</a>
+    </div>
+    </div>
 </div>
+
