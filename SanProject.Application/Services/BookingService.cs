@@ -19,6 +19,7 @@ using SanProject.Shared.BookingModels;
 using SanProject.Domain.SetReservation.Reponse;
 using SanProject.Domain.CommitReservation;
 using SanProject.Domain.ReservationDetails;
+using SanProject.Domain;
 
 namespace SanProject.Application.Services
 {
@@ -172,8 +173,10 @@ namespace SanProject.Application.Services
             var req = await client.PostAsync("http://service.stage.paximum.com/v2/api/bookingservice/getreservationdetail", byteContent);
             var contents = await req.Content.ReadAsStringAsync();
             ReservationDetailRoot obj = JsonConvert.DeserializeObject<ReservationDetailRoot>(contents);
-            
+            ReservationDBDTO dbobj= new ReservationDBDTO();
             ReservationDetailDTO detaildto = new ReservationDetailDTO();
+            
+            //fill the view dto
             detaildto.travellers = obj.body.reservationData.travellers; detaildto.expiresOn = obj.body.expiresOn;
             detaildto.bookingNumber = obj.body.reservationData.reservationInfo.bookingNumber;
             detaildto.agency = obj.body.reservationData.reservationInfo.agency;
@@ -184,6 +187,20 @@ namespace SanProject.Application.Services
             detaildto.paymentDetail = obj.body.reservationData.paymentDetail;
             detaildto.documenturl = obj.body.reservationData.reservationInfo.documents[0].url;
             detaildto.serviceDetails = obj.body.reservationData.services[0].serviceDetails;
+
+            //fill DB dto
+            dbobj.reservationNumber = obj.body.reservationNumber; dbobj.buyerId = detaildto.travellers[0].travellerId;
+            dbobj.travellerNumber = detaildto.travellers.Count; dbobj.paymentNo = detaildto.paymentDetail.paymentPlan[0].paymentNo;
+            dbobj.paymentAmount = detaildto.paymentDetail.paymentPlan[0].price.amount;
+            dbobj.paymetCurrency = detaildto.paymentDetail.paymentPlan[0].price.currency;
+            dbobj.bookingNumber = detaildto.bookingNumber; dbobj.beginDate = detaildto.beginDate;
+            dbobj.endDate = detaildto.endDate; dbobj.serviceId = detaildto.serviceDetails.serviceId;
+            dbobj.hotelName = detaildto.serviceDetails.hotelDetail.name;
+            dbobj.hotelPhoneNumber = detaildto.serviceDetails.hotelDetail.phoneNumber;
+            dbobj.hotelHomePage= detaildto.serviceDetails.hotelDetail.homePage;
+
+            _unitofwork.ReservationsRepository.Add(dbobj);
+            _unitofwork.Complete();
 
             return detaildto;
         }
