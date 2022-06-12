@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SanProject.Data;
 
 namespace SanProject.Data.Migrations
 {
     [DbContext(typeof(SanProjectDBContext))]
-    partial class SanProjectDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220612140525_Reservations are updated")]
+    partial class Reservationsareupdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -65,6 +65,10 @@ namespace SanProject.Web.Controllers
                 }
             }
             ReservationDetailDTO res = await _bookingservice.FullBooking(model.offerId, model.currency, model.culture, travls);
+            if (res == null)
+            {
+                return BadRequest("Reservation Could Not Be Made");
+            }
             return View(res);
         }
 

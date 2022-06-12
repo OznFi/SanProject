@@ -139,6 +139,10 @@ namespace SanProject.Application.Services
             var contents = await req.Content.ReadAsStringAsync();
 
             ReservationReponseRoot obj = JsonConvert.DeserializeObject<ReservationReponseRoot>(contents);
+            if (obj.body == null)
+            {
+                return null;
+            }
             return obj.body.transactionId;
         }
 
@@ -156,6 +160,10 @@ namespace SanProject.Application.Services
             var req = await client.PostAsync("http://service.stage.paximum.com/v2/api/bookingservice/committransaction", byteContent);
             var contents = await req.Content.ReadAsStringAsync();
             ReservationCommitRoot obj = JsonConvert.DeserializeObject<ReservationCommitRoot>(contents);
+            //if (obj.body == null)
+            //{
+              //  return null;
+            //}
             return obj.body.reservationNumber;
         }
 
@@ -198,6 +206,8 @@ namespace SanProject.Application.Services
             dbobj.hotelName = detaildto.serviceDetails.hotelDetail.name;
             dbobj.hotelPhoneNumber = detaildto.serviceDetails.hotelDetail.phoneNumber;
             dbobj.hotelHomePage= detaildto.serviceDetails.hotelDetail.homePage;
+            dbobj.hotelCity = detaildto.serviceDetails.hotelDetail.city.name;
+            dbobj.hotelCountry=detaildto.serviceDetails.hotelDetail.country.name;
 
             _unitofwork.ReservationsRepository.Add(dbobj);
             _unitofwork.Complete();

@@ -21,5 +21,7 @@ namespace SanProject.Domain
         public string hotelName { get; set; }
         public string hotelPhoneNumber { get; set; }
         public string hotelHomePage { get; set; }
+        public string hotelCity { get; set; }
+        public string hotelCountry { get; set; }
     }
 }

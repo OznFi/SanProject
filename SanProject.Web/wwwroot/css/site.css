@@ -245,3 +245,6 @@ user_register_inputfield label{
 #traveller_container {
     display: flex !important;
 }
+#booking_details_sections > div{
+    margin-bottom:15px;
+}
