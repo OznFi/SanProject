@@ -172,6 +172,7 @@ namespace SanProject.Application.Services
             var req = await client.PostAsync("http://service.stage.paximum.com/v2/api/bookingservice/getreservationdetail", byteContent);
             var contents = await req.Content.ReadAsStringAsync();
             ReservationDetailRoot obj = JsonConvert.DeserializeObject<ReservationDetailRoot>(contents);
+            
             ReservationDetailDTO detaildto = new ReservationDetailDTO();
             detaildto.travellers = obj.body.reservationData.travellers; detaildto.expiresOn = obj.body.expiresOn;
             detaildto.bookingNumber = obj.body.reservationData.reservationInfo.bookingNumber;

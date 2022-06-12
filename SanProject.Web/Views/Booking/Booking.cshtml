@@ -13,12 +13,22 @@
         <div>
             <div>
                 <span>@(Model.serviceDetails.hotelDetail.country.name), @(Model.serviceDetails.hotelDetail.city.name)</span>
+            </div>
+            <div>
                 <span>Address: @Model.serviceDetails.hotelDetail.address.address</span>
             </div>
             
-            <span>@Model.serviceDetails.hotelDetail.location.name</span>
-            <span>Phone: @(Model.serviceDetails.hotelDetail.phoneNumber)</span>
-            <span>Fax: @(Model.serviceDetails.hotelDetail.faxNumber)</span>
+            <div>
+                <span>@Model.serviceDetails.hotelDetail.location.name</span>
+            </div>
+            <div>
+                <span>Phone: @(Model.serviceDetails.hotelDetail.phoneNumber)</span>
+            </div>
+            <div>
+                <span>Fax: @(Model.serviceDetails.hotelDetail.faxNumber)</span>
+            </div>
+            
+            
             <a href=@Model.serviceDetails.hotelDetail.homePage>Website</a>
         </div>
         <div id="traveller_container">

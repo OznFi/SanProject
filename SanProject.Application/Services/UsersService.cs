@@ -40,22 +40,7 @@ namespace SanProject.Application.Services
             _unitofwork.Complete();
             _logger.LogInformation("{@user} kaydedildi", user);
         }
-        /*public async Task ActivateUsers(int id)
-        {
-            User us = _unitofwork.UsersRepository.FindUser(id);
-            //if (us == null)
-            //{
-            //return null;
-            //}
-
-            bool act = us.IsActive;
-            us.IsActive = !act;
-            _unitofwork.UsersRepository.ActivateUser(us);
-            _unitofwork.Complete();
-            _logger.LogInformation("{@id} numarali user aktifligi degistirildi", id);
-            await Task.CompletedTask;
-
-        }*/
+        
         public async Task EditUser(User us)
         {
             

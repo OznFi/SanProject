@@ -1,0 +1,386 @@
+﻿++Solution 'SanProject' ‎(5 of 5 projects)
+i:{00000000-0000-0000-0000-000000000000}:SanProject.sln
+++SanProject.Domain
+i:{00000000-0000-0000-0000-000000000000}:SanProject.Domain
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\bin\debug\netcoreapp3.1\sanproject.domain.dll
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\sanproject.domain.csproj
+++Dependencies
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:>520
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:>521
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:>519
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:>522
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>742
+++User.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\user.cs
+++Frameworks
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:frameworks
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:frameworks
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:frameworks
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:frameworks
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:frameworks
+++Microsoft.NETCore.App
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\microsoft.netcore.app
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\microsoft.netcore.app
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\microsoft.netcore.app
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\microsoft.netcore.app
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\microsoft.netcore.app
+++SanProject.Data
+i:{00000000-0000-0000-0000-000000000000}:SanProject.Data
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\bin\debug\netcoreapp3.1\sanproject.data.dll
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\sanproject.data.csproj
+++Migrations
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\
+++Repositories
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\repositories\
+++Interfaces
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\repositories\interfaces\
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\interfaces\
+++IRepository.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\repositories\interfaces\irepository.cs
+++IUsersRepository.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\repositories\interfaces\iusersrepository.cs
+++Repository.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\repositories\repository.cs
+++UsersRepository.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\repositories\usersrepository.cs
+++SanProjectDBContext.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\sanprojectdbcontext.cs
+++UnitOfWork.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\unitofwork.cs
+++Analyzers
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:analyzers
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:analyzers
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:analyzers
+++Packages
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:packages
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:packages
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:packages
+++Projects
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:projects
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:projects
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:projects
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:projects
+++20220602104115_init.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220602104115_init.cs
+++20220603061955_deletion status added to user.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220603061955_deletion status added to user.cs
+++SanProjectDBContextModelSnapshot.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\sanprojectdbcontextmodelsnapshot.cs
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\.nuget\packages\microsoft.entityframeworkcore.analyzers\3.1.25\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\.nuget\packages\microsoft.entityframeworkcore.analyzers\3.1.25\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\.nuget\packages\microsoft.entityframeworkcore.analyzers\3.1.25\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.EntityFrameworkCore (3.1.25)
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:>752
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>781
+++Microsoft.EntityFrameworkCore.SqlServer (3.1.25)
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:>754
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>782
+++Microsoft.EntityFrameworkCore.Tools (3.1.25)
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:>755
+++20220602104115_init.Designer.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220602104115_init.designer.cs
+++20220603061955_deletion status added to user.Designer.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220603061955_deletion status added to user.designer.cs
+++SanProject.Shared
+i:{00000000-0000-0000-0000-000000000000}:SanProject.Shared
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\bin\debug\netcoreapp3.1\sanproject.shared.dll
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\sanproject.shared.csproj
+++SettingsModels
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\settingsmodels\
+++EmailSettings.cs
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\settingsmodels\emailsettings.cs
+++SanProject.Application
+i:{00000000-0000-0000-0000-000000000000}:SanProject.Application
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\sanproject.application.csproj
+++IEmailService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\interfaces\iemailservice.cs
+++IUsersService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\interfaces\iusersservice.cs
+++Models
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\models\
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\models\
+++MailRequest.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\models\mailrequest.cs
+++Services
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\
+++CitySearchService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\citysearchservice.cs
+++EmailService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\emailservice.cs
+++FakeEmailService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\fakeemailservice.cs
+++UsersService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\usersservice.cs
+++Microsoft.Extensions.Logging.Generators
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.1\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.1\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++MailKit (3.2.0)
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:>763
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>1430
+++Microsoft.Extensions.Logging.Abstractions (6.0.1)
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:>758
+++Microsoft.Extensions.Options (6.0.0)
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:>764
+++MimeKit (3.2.0)
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:>759
+++Serilog (2.11.0)
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:>762
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>785
+++SanProject.Web
+i:{00000000-0000-0000-0000-000000000000}:SanProject.Web
+++Connected Services 
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>743
+++Properties
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\properties\
+++wwwroot
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\
+++Controllers
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\controllers\
+++HomeController.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\controllers\homecontroller.cs
+++UsersController.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\controllers\userscontroller.cs
+++ErrorViewModel.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\models\errorviewmodel.cs
+++LoginUser.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\models\loginuser.cs
+++Views
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\
+++Home
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\home\
+++Index.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\home\index.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\users\index.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\hotel\index.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\booking\index.cshtml
+++Privacy.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\home\privacy.cshtml
+++Shared
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\shared\
+++_Layout.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\shared\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\shared\error.cshtml
+++Users
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\users\
+++_ViewImports.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\_viewstart.cshtml
+++appsettings.json
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\appsettings.json
+++Program.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\program.cs
+++Startup.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\startup.cs
+++No service dependencies discovered
+++launchSettings.json
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\properties\launchsettings.json
+++css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\css\
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\
+++js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\js\
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\
+++favicon.ico
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\favicon.ico
+++appsettings.Development.json
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\program files\dotnet\sdk\6.0.203\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.App
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\microsoft.aspnetcore.app
+++Microsoft.EntityFrameworkCore.Design (3.1.25)
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>783
+++Serilog.AspNetCore (5.0.0)
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>784
+++site.css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\css\site.css
+++site.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\js\site.js
+++bootstrap
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\
+++jquery
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery\
+++jquery-validation
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation-unobtrusive\
+++dist
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery\dist\
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery\license.txt
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++jquery.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap-grid.css.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-reboot.css.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap.bundle.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.js.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap-grid.min.css.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-reboot.min.css.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap.bundle.js.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.min.js.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.bundle.min.js.map
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+++Edit.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\users\edit.cshtml
+++Registration.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\users\registration.cshtml
+++SQL Server Database (ConnectionStrings:DefaultConnection)
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>1121
+++SQL Server Database dependency with connectionId 'ConnectionStrings:DefaultConnection' is detected
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:>1122
+++AuthenticationService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\authenticationservice.cs
+++Newtonsoft.Json (13.0.1)
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:>1125
+++IAuthenticationService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\interfaces\iauthenticationservice.cs
+++Token.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\token.cs
+++20220607075200_Tokens are added.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220607075200_tokens are added.cs
+++20220607075200_Tokens are added.Designer.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220607075200_tokens are added.designer.cs
+++ICitySearchService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\interfaces\icitysearchservice.cs
+++City.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\city.cs
+++Cities.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\home\cities.cshtml
+++FullCity.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\city\fullcity.cs
+++HotelObject.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\hotelobject.cs
+++HotelController.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\controllers\hotelcontroller.cs
+++Hotel
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\hotel\
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\hotel\
+++HotelService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\hotelservice.cs
+++FullHotel.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\hotel\fullhotel.cs
+++NewFolder
+++City
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\city\
+++priceSearchQueryObject.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\pricesearchqueryobject.cs
+++HotelModels.cs
+++HotelModels
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\hotelmodels\
+++HotelDetailDTO.cs
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\hotelmodels\hoteldetaildto.cs
+++IHotelService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\interfaces\ihotelservice.cs
+++HotelDetail.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\hotel\hoteldetail.cshtml
+++BookingService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\services\bookingservice.cs
+++Booking
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\booking\
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\booking\
+++BookingStart.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\booking\bookingstart.cs
+++SetReservation.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\setreservation\setreservation.cs
+++SetReservation
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\setreservation\
+++BookingModels
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\bookingmodels\
+++TravellerDTO.cs
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\bookingmodels\travellerdto.cs
+++SetReservationResponse.cs
+++Reponse
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\setreservation\reponse\
+++SetReservationReponse.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\setreservation\reponse\setreservationreponse.cs
+++CommitReservation
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\commitreservation\
+++CommitReservation.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\commitreservation\commitreservation.cs
+++ReservationDetails
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\reservationdetails\
+++ReservationDetails.cs
+i:{9347ff90-9f98-46ea-9c88-bf410e256cb3}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.domain\reservationdetails\reservationdetails.cs
+++ReservationDetailDTO.cs
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\bookingmodels\reservationdetaildto.cs
+++NumberOfTravelers.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\hotel\numberoftravelers.cshtml
+++HotelQueryDTO.cs
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\hotelmodels\hotelquerydto.cs
+++BookingController.cs
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\controllers\bookingcontroller.cs
+++IBookingService.cs
+i:{03930483-41ac-4215-9a5f-9a6cc9dd5a14}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.application\interfaces\ibookingservice.cs
+++BookingFormsViewModel.cs
+i:{31ce5665-6d3b-4544-873a-aca11db159ed}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.shared\bookingmodels\bookingformsviewmodel.cs
+++BookingDetails.cshtml
+++Booking.cshtml
+i:{4f08d244-8042-4be3-aa2f-6860c113de7a}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.web\views\booking\booking.cshtml
+++20220612120013_Reservations are added.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220612120013_reservations are added.cs
+++20220612120013_Reservations are added.Designer.cs
+i:{e4d3c465-e9e8-4895-a510-9dda2dfa5c0e}:c:\users\zbook 15 g5\desktop\mvcday\sanproject\sanproject.data\migrations\20220612120013_reservations are added.designer.cs
