@@ -175,6 +175,7 @@ table {
 }
 #traveller_formsdiv form{
     display:flex;
+    margin-right:auto;margin-left:auto;
 }
 .active_user {
     color: forestgreen;

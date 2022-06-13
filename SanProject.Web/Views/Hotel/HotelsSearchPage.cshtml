@@ -13,7 +13,7 @@
             <label asp-for=NumberOfTravellers>Number of Travellers</label>
             <input min="1" type="number"  asp-for=NumberOfTravellers value=1></input>
             <label asp-for=ChcekIn></label>
-            <input min="@DateTime.Now" value="@DateTime.Now.ToString("yyyy-MM-dd")" type="date"  asp-for=ChcekIn ></input>
+            <input onkeydown="return false" min="@DateTime.Now.ToString("yyyy-MM-dd")" value="@DateTime.Now.ToString("yyyy-MM-dd")" type="date"  asp-for=ChcekIn ></input>
             <button type="submit" class="kaydetmeButonu">Submit</button>
        </div>
         
