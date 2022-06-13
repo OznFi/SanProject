@@ -259,6 +259,6 @@ user_register_inputfield label{
     display: flex;
 
 }
-.hotel_list_element img{
-    height:200px; width:200px;
+.hotel_list_element .imgdiv{
+    height:200px; width:200px;margin:10px;overflow:hidden;
 }

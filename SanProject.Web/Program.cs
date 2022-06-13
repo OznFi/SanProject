@@ -17,7 +17,7 @@ namespace SanProject.Web
         {
             Log.Logger = new LoggerConfiguration()
               .WriteTo.Console()
-              .WriteTo.File(new JsonFormatter(), "Logs/logs-{Date}.json", rollingInterval: RollingInterval.Day)
+              .WriteTo.File(new JsonFormatter(), "logs-{Date}.json", rollingInterval: RollingInterval.Day)
               .CreateLogger();
 
             try
@@ -33,11 +33,11 @@ namespace SanProject.Web
             {
                 Log.CloseAndFlush();
             }
-            CreateHostBuilder(args).Build().Run();
+            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
+            Host.CreateDefaultBuilder(args).UseSerilog()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

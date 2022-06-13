@@ -28,6 +28,8 @@ namespace SanProject.Web.Controllers
             _citysearchservice = citysearchservice;
             _hotelservice = hotelservice;
         }
+
+
         public async Task<IActionResult> HotelsSearchPage(string id)
         {
             AllHotelQueryDTO t=new AllHotelQueryDTO();
@@ -40,24 +42,46 @@ namespace SanProject.Web.Controllers
             
             QueryDetailBundleDTO a=new QueryDetailBundleDTO();
             List<HotelDetailDTO> t = await _hotelservice.GetAllDetails(qu);
+            if (t == null)
+            {
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
             return View(t);
         }
 
 
-       /* public async Task<IActionResult> NumberofTravelers(string id)
+        public async Task<IActionResult> AlternateHotelDetail(string hotelId, int numtrav, string checkinstr)
         {
-            
-            HotelQueryDTO a=new HotelQueryDTO();
-            a.HotelId = id;
-            a.NumberOfTravellers = 1;
-            HotelDetailDTO dt = await _hotelservice.GetDetails(a.HotelId, a.NumberOfTravellers);
+            HotelQueryDTO dto = new HotelQueryDTO(); dto.HotelId = hotelId; dto.NumberOfTravellers = numtrav;
+            HotelDetailDTO dt = await _hotelservice.GetDetails(dto.HotelId, dto.NumberOfTravellers, checkinstr);
+            //HotelDetailDTO dt = await _hotelservice.GetDetails(dt.HotelId, dt.NumberOfTravellers);
             if (dt == null)
             {
-                //return View("~/Views/SpecificView.cshtml");
                 return Redirect(Request.Headers["Referer"].ToString());
             }
-            return View(a);
-        }*/
+            return View("HotelDetail", dt);
+        }
+
+
+
+
+
+        //The previous user number related code that initiated the hotel details afterwards
+
+        /* public async Task<IActionResult> NumberofTravelers(string id)
+         {
+
+             HotelQueryDTO a=new HotelQueryDTO();
+             a.HotelId = id;
+             a.NumberOfTravellers = 1;
+             HotelDetailDTO dt = await _hotelservice.GetDetails(a.HotelId, a.NumberOfTravellers);
+             if (dt == null)
+             {
+                 //return View("~/Views/SpecificView.cshtml");
+                 return Redirect(Request.Headers["Referer"].ToString());
+             }
+             return View(a);
+         }*/
         /*public async Task<IActionResult> HotelDetail(HotelQueryDTO dto)
         {
             HotelDetailDTO dt = await _hotelservice.GetDetails(dto.HotelId, dto.NumberOfTravellers);
@@ -68,17 +92,7 @@ namespace SanProject.Web.Controllers
             }
             return View(dt);
         }*/
-        public async Task<IActionResult> AlternateHotelDetail(string hotelId, int numtrav, string checkinstr)
-        {
-            HotelQueryDTO dto=new HotelQueryDTO();dto.HotelId=hotelId;dto.NumberOfTravellers=numtrav;
-            HotelDetailDTO dt = await _hotelservice.GetDetails(dto.HotelId, dto.NumberOfTravellers, checkinstr);
-            //HotelDetailDTO dt = await _hotelservice.GetDetails(dt.HotelId, dt.NumberOfTravellers);
-            if (dt == null)
-            {
-                return Redirect(Request.Headers["Referer"].ToString());
-            }
-            return View("HotelDetail", dt);
-        }
+
 
 
     }

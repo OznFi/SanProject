@@ -36,6 +36,7 @@ namespace SanProject.Web.Controllers
             _hotelservice = hotelservice;
             _bookingservice = bookingservice;
         }
+
         public IActionResult Index(string offid, string currenc, int travnum)
         {
 
