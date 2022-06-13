@@ -41,10 +41,11 @@ namespace SanProject.Application.Services
                 Subject = "Otel user kayit",
                 ToEmail = user.Email
             };
+            _logger.LogInformation("{@user} kaydedildi", user);
             await _emailService.SendEmailAsync(mail);
 
             _unitofwork.Complete();
-            _logger.LogInformation("{@user} kaydedildi", user);
+            
         }
         
         public async Task EditUser(User us)

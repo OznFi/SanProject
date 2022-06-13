@@ -108,3 +108,5 @@ C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcorea
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Booking\Index.cshtml.g.cs
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Booking\Booking.cshtml.g.cs
 C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\bin\Debug\netcoreapp3.1\logs-{Date}20220613.json
+C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\bin\Debug\netcoreapp3.1\Logs\logs-{Date}20220613.json
+C:\Users\ZBOOK 15 G5\Desktop\mvcday\SanProject\SanProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\HotelsSearchPage.cshtml.g.cs

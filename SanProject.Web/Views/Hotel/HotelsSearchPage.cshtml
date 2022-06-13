@@ -1,0 +1,21 @@
+﻿@using SanProject.Shared.HotelModels
+@model AllHotelQueryDTO
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div id="traveller_number_container">
+    <h3>Enter The Number Of Travellers</h3>
+    <form method="post" asp-controller="Hotel" asp-action="Index">
+        <div id="traveller_number_inputdiv">
+            <input type="hidden" readonly value=@Model.LocationId asp-for=LocationId></input>
+            <label asp-for=NumberOfTravellers>Number of Travellers</label>
+            <input min="1" type="number"  asp-for=NumberOfTravellers value=1></input>
+            <label asp-for=ChcekIn></label>
+            <input min="@DateTime.Now" value="@DateTime.Now.ToString("yyyy-MM-dd")" type="date"  asp-for=ChcekIn ></input>
+            <button type="submit" class="kaydetmeButonu">Submit</button>
+       </div>
+        
+    </form>
+</div>

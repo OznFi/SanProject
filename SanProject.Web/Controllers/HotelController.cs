@@ -28,14 +28,23 @@ namespace SanProject.Web.Controllers
             _citysearchservice = citysearchservice;
             _hotelservice = hotelservice;
         }
-        public async Task<IActionResult> Index(string id)
+        public async Task<IActionResult> HotelsSearchPage(string id)
         {
-            List<HotelObject> t = await _citysearchservice.CityHotelSearch(id);
+            AllHotelQueryDTO t=new AllHotelQueryDTO();
+            t.LocationId = id;
+            return View(t);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Index(AllHotelQueryDTO qu)
+        {
+            
+            QueryDetailBundleDTO a=new QueryDetailBundleDTO();
+            List<HotelDetailDTO> t = await _hotelservice.GetAllDetails(qu);
             return View(t);
         }
 
 
-        public async Task<IActionResult> NumberofTravelers(string id)
+       /* public async Task<IActionResult> NumberofTravelers(string id)
         {
             
             HotelQueryDTO a=new HotelQueryDTO();
@@ -48,8 +57,8 @@ namespace SanProject.Web.Controllers
                 return Redirect(Request.Headers["Referer"].ToString());
             }
             return View(a);
-        }
-        public async Task<IActionResult> HotelDetail(HotelQueryDTO dto)
+        }*/
+        /*public async Task<IActionResult> HotelDetail(HotelQueryDTO dto)
         {
             HotelDetailDTO dt = await _hotelservice.GetDetails(dto.HotelId, dto.NumberOfTravellers);
             //HotelDetailDTO dt = await _hotelservice.GetDetails(dt.HotelId, dt.NumberOfTravellers);
@@ -58,6 +67,17 @@ namespace SanProject.Web.Controllers
                 return Redirect(Request.Headers["Referer"].ToString());
             }
             return View(dt);
+        }*/
+        public async Task<IActionResult> AlternateHotelDetail(string hotelId, int numtrav, string checkinstr)
+        {
+            HotelQueryDTO dto=new HotelQueryDTO();dto.HotelId=hotelId;dto.NumberOfTravellers=numtrav;
+            HotelDetailDTO dt = await _hotelservice.GetDetails(dto.HotelId, dto.NumberOfTravellers, checkinstr);
+            //HotelDetailDTO dt = await _hotelservice.GetDetails(dt.HotelId, dt.NumberOfTravellers);
+            if (dt == null)
+            {
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+            return View("HotelDetail", dt);
         }
 
 

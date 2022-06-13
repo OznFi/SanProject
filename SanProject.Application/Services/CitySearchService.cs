@@ -63,6 +63,7 @@ namespace SanProject.Application.Services
                     if (t[i].country.name == "Turkey" &&!(t[i].hotelCount==0 || t[i].hotelCount==null))
                     {
                         CityObject c = new CityObject();c.Name = t[i].city.name;c.HotelCount = t[i].hotelCount;
+                        c.Id = t[0].city.id;
                         if (!conten.Contains(c))
                         {
                             conten.Add(c);

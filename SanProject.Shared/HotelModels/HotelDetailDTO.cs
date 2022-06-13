@@ -7,6 +7,7 @@ namespace SanProject.Shared.HotelModels
 {
     public class HotelDetailDTO
     {
+        public string HotelId { get; set; }
         public int stars { get; set; }
         public string name { get; set; }
         public double rating { get; set; }

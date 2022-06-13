@@ -215,6 +215,8 @@ namespace SanProject.Application.Services
             return detaildto;
         }
 
+
+        //The entire booking process happens through this method, by calling the other ones sequentially
         public async Task<ReservationDetailDTO> FullBooking(string offerId, string currency, string culture, List<Domain.SetReservation.Traveller> manyt)
         {
             if (tokne == null)
@@ -222,7 +224,15 @@ namespace SanProject.Application.Services
                 tokne = await _authenticationService.Login();
             }
             Root beginstransact = await BeginTransaction(offerId, currency, culture);
+            if (beginstransact == null)
+            {
+                return null;
+            }
             string transactid = await SetReservation(beginstransact, manyt);
+            if (transactid == null)
+            {
+                return null;
+            }
             string reservenumber = await CommitReservation(transactid);
             if (reservenumber == null)
             {

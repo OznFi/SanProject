@@ -77,7 +77,7 @@ namespace SanProject.Domain.Hotel
     public class Hotel
     {
         public Geolocation geolocation { get; set; }
-        public int stars { get; set; }
+        public float stars { get; set; }
         public double rating { get; set; }
         public List<object> themes { get; set; }
         public List<object> facilities { get; set; }

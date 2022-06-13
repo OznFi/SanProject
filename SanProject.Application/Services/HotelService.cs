@@ -34,35 +34,15 @@ namespace SanProject.Application.Services
 
         }
         //for get /pricesearch
-        public async Task<HotelDetailDTO> GetDetails(string querys, int adultnum)
+        public async Task<HotelDetailDTO> GetDetails(string querys, int adultnum, string checkinstr)
         {
             if (tokne == null)
             {
                 tokne = await _authenticationService.Login();
             }
-            /*var searchobj = new
-            {
-                checkAllotment= true,
-                checkStopSale= true,
-                getOnlyDiscountedPrice= false,
-                getOnlyBestOffers= true,
-                productType= 2,
-                Products=[
-                    querys
-                ],
-                roomCriteria=[
-                new{
-                    adult = 2
-                }
-                ],
-                nationality= "DE",
-                checkIn= "2022-10-17",
-                night= 7,
-                currency= "EUR",
-                culture= "en-US"
-            };*/
+            
             RootQ searchobj = new RootQ();
-            searchobj.Products.Add(querys); searchobj.roomCriteria[0].adult = adultnum;
+            searchobj.Products.Add(querys); searchobj.roomCriteria[0].adult = adultnum; searchobj.checkIn = checkinstr;
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokne);
             var content = JsonConvert.SerializeObject(searchobj);
@@ -98,7 +78,67 @@ namespace SanProject.Application.Services
             
             
         }
+        public async Task<List<HotelDetailDTO>> GetAllDetails(AllHotelQueryDTO qu)
+        {
+            if (tokne == null)
+            {
+                tokne = await _authenticationService.Login();
+            }
 
+            EarlyRoot searchobj = new EarlyRoot();
+            var st =  new { id = qu.LocationId, type = 2 } ;
+            searchobj.roomCriteria[0].adult = qu.NumberOfTravellers; searchobj.arrivalLocations[0]=st;
+            searchobj.checkIn=qu.ChcekIn.ToString("yyyy-MM-dd");
+            //searchobj.checkIn = "2022-06-13";
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokne);
+            var content = JsonConvert.SerializeObject(searchobj);
+            var buffer = System.Text.Encoding.UTF8.GetBytes(content);
+            var byteContent = new ByteArrayContent(buffer);
+            var req = await client.PostAsync("http://service.stage.paximum.com/v2/api/productservice/pricesearch", byteContent);
+            var contents = await req.Content.ReadAsStringAsync();
+            Root obj = JsonConvert.DeserializeObject<Root>(contents);
+            if (obj.body == null)
+            {
+                return null;
+            }
+            List<HotelDetailDTO> tt= new List<HotelDetailDTO>();
+            List<Hotel> hotelobj = new List<Hotel>();
+            //try
+            if (obj.body == null)
+            {
+                return null;
+            }
+            //{
+            hotelobj = obj.body.hotels;
+            //}
+            for(int i=0; i < hotelobj.Count; i++)
+            {
+                HotelDetailDTO t = new HotelDetailDTO();
+                t.HotelId = hotelobj[i].id;
+                t.name = hotelobj[i].name; t.description = hotelobj[i].description; t.price = hotelobj[i].offers[0].price;
+                t.rating = Math.Round(hotelobj[i].rating, 1); t.rooms = hotelobj[i].offers[0].rooms; t.locationName = hotelobj[i].location.name;
+                if (hotelobj[i].offers[0].cancellationPolicies != null)
+                {
+                    t.cancellationDueDate = hotelobj[i].offers[0].cancellationPolicies[0].dueDate;
+                    t.cancellationPrice = hotelobj[i].offers[0].cancellationPolicies[0].price.amount;
+                    t.cancellationCurrency = hotelobj[i].offers[0].cancellationPolicies[0].price.currency;
+                }
+
+                t.offerId = hotelobj[i].offers[0].offerId; t.offerCheckIn = hotelobj[i].offers[0].checkIn;
+                t.address = hotelobj[i].address; t.hotelCategory = hotelobj[i].hotelCategory; t.thumbnail = hotelobj[i].thumbnailFull;
+                t.travellernum = hotelobj[i].offers[0].rooms[0].travellers.Count;
+                tt.Add(t);
+            }
+
+            return tt;
+
+
+
+        }
+
+
+        //Relatively useless code, will be terminated
         public async Task<HotelDetailDTO> GetDetailsTest(string querys, int adultnum)
         {
             if (tokne == null)
