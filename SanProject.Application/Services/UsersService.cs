@@ -25,13 +25,6 @@ namespace SanProject.Application.Services
         
         public async Task AddUser(User user)
         {
-            //Log.Logger = new LoggerConfiguration()
-            //.WriteTo.RollingFile(new JsonFormatter(), Path.Combine(@"c:\log", "[filename]-{Date}.txt"))
-            //.CreateLogger();
-          // var log = new LoggerConfiguration()
-            //.MinimumLevel.Debug()
-            //.WriteTo.File(@"SanProject\SanProject.Web\Serilogs\Applogs.log")
-            //.CreateLogger();
             user.RegistryDate = DateTime.Now;
             user.IsActive = true;
             _unitofwork.UsersRepository.Add(user);
@@ -41,7 +34,7 @@ namespace SanProject.Application.Services
                 Subject = "Otel user kayit",
                 ToEmail = user.Email
             };
-            _logger.LogInformation("{@user} kaydedildi", user);
+            _logger.LogInformation("{@user} registered", user);
             await _emailService.SendEmailAsync(mail);
 
             _unitofwork.Complete();
@@ -63,17 +56,24 @@ namespace SanProject.Application.Services
             User us = _unitofwork.UsersRepository.FindUser(id);
             _unitofwork.UsersRepository.Remove(us);
             _unitofwork.Complete();
-            _logger.LogInformation("{@us} silindi", us);
+            _logger.LogInformation("{@us} deleted", us);
             await Task.CompletedTask;
         }
         public async Task SoftDelete(User us)
         {
-            //User us = _unitofwork.UsersRepository.FindUser(id);
             us.IsDeleted = !us.IsDeleted;
             _unitofwork.UsersRepository.SoftDeleteUser(us);
             _unitofwork.Complete();
-            _logger.LogInformation("{@us} soft silindi", us);
+            _logger.LogInformation("{@us} soft deleted", us);
         }
+
+        
+        
+        
+        
+        
+        //Deprecated, is already available in edit
+        
         public async Task ActivateUser(int id)
         {
             User us = _unitofwork.UsersRepository.FindUser(id);
@@ -81,7 +81,7 @@ namespace SanProject.Application.Services
             us.IsActive = !act;
             _unitofwork.UsersRepository.ActivateUser(us);
             _unitofwork.Complete();
-            _logger.LogInformation("{@id} numarali user aktifligi degistirildi", id);
+            _logger.LogInformation("{@id}", id);
             await Task.CompletedTask;
 
         }
