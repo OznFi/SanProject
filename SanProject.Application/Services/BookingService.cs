@@ -160,10 +160,10 @@ namespace SanProject.Application.Services
             var req = await client.PostAsync("http://service.stage.paximum.com/v2/api/bookingservice/committransaction", byteContent);
             var contents = await req.Content.ReadAsStringAsync();
             ReservationCommitRoot obj = JsonConvert.DeserializeObject<ReservationCommitRoot>(contents);
-            //if (obj.body == null)
-            //{
-              //  return null;
-            //}
+            if (obj.body == null)
+            {
+                return null;
+            }
             return obj.body.reservationNumber;
         }
 
@@ -224,6 +224,10 @@ namespace SanProject.Application.Services
             Root beginstransact = await BeginTransaction(offerId, currency, culture);
             string transactid = await SetReservation(beginstransact, manyt);
             string reservenumber = await CommitReservation(transactid);
+            if (reservenumber == null)
+            {
+                return null;
+            }
             ReservationDetailDTO detaildot = await GetReservationDetails(reservenumber);
             return detaildot;
         }

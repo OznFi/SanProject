@@ -496,6 +496,18 @@
           "lib/netstandard2.1/Serilog.dll": {}
         }
       },
+      "Serilog.Sinks.File/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.10.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Serilog.Sinks.File.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Serilog.Sinks.File.dll": {}
+        }
+      },
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
@@ -2407,6 +2419,33 @@
         "lib/netstandard2.1/Serilog.xml",
         "serilog.2.11.0.nupkg.sha512",
         "serilog.nuspec"
+      ]
+    },
+    "Serilog.Sinks.File/5.0.0": {
+      "sha512": "uwV5hdhWPwUH1szhO8PJpFiahqXmzPzJT/sOijH/kFgUx+cyoDTMM8MHD0adw9+Iem6itoibbUXHYslzXsLEAg==",
+      "type": "package",
+      "path": "serilog.sinks.file/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/icon.png",
+        "lib/net45/Serilog.Sinks.File.dll",
+        "lib/net45/Serilog.Sinks.File.pdb",
+        "lib/net45/Serilog.Sinks.File.xml",
+        "lib/net5.0/Serilog.Sinks.File.dll",
+        "lib/net5.0/Serilog.Sinks.File.pdb",
+        "lib/net5.0/Serilog.Sinks.File.xml",
+        "lib/netstandard1.3/Serilog.Sinks.File.dll",
+        "lib/netstandard1.3/Serilog.Sinks.File.pdb",
+        "lib/netstandard1.3/Serilog.Sinks.File.xml",
+        "lib/netstandard2.0/Serilog.Sinks.File.dll",
+        "lib/netstandard2.0/Serilog.Sinks.File.pdb",
+        "lib/netstandard2.0/Serilog.Sinks.File.xml",
+        "lib/netstandard2.1/Serilog.Sinks.File.dll",
+        "lib/netstandard2.1/Serilog.Sinks.File.pdb",
+        "lib/netstandard2.1/Serilog.Sinks.File.xml",
+        "serilog.sinks.file.5.0.0.nupkg.sha512",
+        "serilog.sinks.file.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -5658,7 +5697,8 @@
       "Newtonsoft.Json >= 13.0.1",
       "SanProject.Data >= 1.0.0",
       "SanProject.Shared >= 1.0.0",
-      "Serilog >= 2.11.0"
+      "Serilog >= 2.11.0",
+      "Serilog.Sinks.File >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -5737,6 +5777,10 @@
           "Serilog": {
             "target": "Package",
             "version": "[2.11.0, )"
+          },
+          "Serilog.Sinks.File": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           }
         },
         "imports": [

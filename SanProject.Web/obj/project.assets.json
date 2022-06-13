@@ -1661,7 +1661,8 @@
           "Newtonsoft.Json": "13.0.1",
           "SanProject.Data": "1.0.0",
           "SanProject.Shared": "1.0.0",
-          "Serilog": "2.11.0"
+          "Serilog": "2.11.0",
+          "Serilog.Sinks.File": "5.0.0"
         },
         "compile": {
           "bin/placeholder/SanProject.Application.dll": {}

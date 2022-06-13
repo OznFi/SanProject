@@ -22,10 +22,16 @@ namespace SanProject.Application.Services
             _emailService = emailservice; ;
             _logger = logger;
         }
-
+        
         public async Task AddUser(User user)
         {
-            
+            //Log.Logger = new LoggerConfiguration()
+            //.WriteTo.RollingFile(new JsonFormatter(), Path.Combine(@"c:\log", "[filename]-{Date}.txt"))
+            //.CreateLogger();
+          // var log = new LoggerConfiguration()
+            //.MinimumLevel.Debug()
+            //.WriteTo.File(@"SanProject\SanProject.Web\Serilogs\Applogs.log")
+            //.CreateLogger();
             user.RegistryDate = DateTime.Now;
             user.IsActive = true;
             _unitofwork.UsersRepository.Add(user);

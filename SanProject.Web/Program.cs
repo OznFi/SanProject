@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Serilog.Formatting.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,24 @@ namespace SanProject.Web
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+              .WriteTo.Console()
+              .WriteTo.File(new JsonFormatter(), "Logs/logs-{Date}.json", rollingInterval: RollingInterval.Day)
+              .CreateLogger();
+
+            try
+            {
+                Log.Information("Starting web host");
+                CreateHostBuilder(args).Build().Run();
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "Host terminated unexpectedly");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
             CreateHostBuilder(args).Build().Run();
         }
 

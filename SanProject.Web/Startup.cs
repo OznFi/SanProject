@@ -9,6 +9,7 @@ using SanProject.Application.Services;
 using SanProject.Application.Services.Interfaces;
 using SanProject.Data;
 using SanProject.Shared.SettingsModels;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace SanProject.Web
             services.AddDbContext<SanProjectDBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-
+            
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IEmailService, FakeEmailService>();
             services.AddTransient<IAuthenticationService, AuthenticationService>();
