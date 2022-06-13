@@ -37,7 +37,7 @@
           <div class="locationinfo">
             <span class="hotel_detail_info_title">Address : </span><span>@item.address</span>
           </div>
-       <a asp-action="AlternateHotelDetail" asp-route-hotelId="@item.HotelId" asp-route-numtrav="@item.travellernum", asp-route-checkinstr="@item.offerCheckIn.ToString("yyyy-MM-dd")">Details</a>
+       <a id="details_anchor" asp-action="AlternateHotelDetail" asp-route-hotelId="@item.HotelId" asp-route-numtrav="@item.travellernum", asp-route-checkinstr="@item.offerCheckIn.ToString("yyyy-MM-dd")">Details</a>
        </div>
           
        </div>
