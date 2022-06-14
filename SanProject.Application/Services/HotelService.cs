@@ -89,7 +89,6 @@ namespace SanProject.Application.Services
             var st =  new { id = qu.LocationId, type = 2 } ;
             searchobj.roomCriteria[0].adult = qu.NumberOfTravellers; searchobj.arrivalLocations[0]=st;
             searchobj.checkIn=qu.ChcekIn.ToString("yyyy-MM-dd");
-            //searchobj.checkIn = "2022-06-13";
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokne);
             var content = JsonConvert.SerializeObject(searchobj);
@@ -138,7 +137,7 @@ namespace SanProject.Application.Services
         }
 
 
-        //Relatively useless code, will be terminated
+        // DEPRECATED //
         public async Task<HotelDetailDTO> GetDetailsTest(string querys, int adultnum)
         {
             if (tokne == null)
