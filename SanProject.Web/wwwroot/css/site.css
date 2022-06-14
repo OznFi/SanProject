@@ -270,10 +270,13 @@ user_register_inputfield label{
     margin:10px;overflow:hidden;
     background-color:white;
 }
-.hotel_list_element .imgdiv img{
-    width:100%;
-    height:100%;
-    object-fit:cover
+.hotel_list_element img{
+    width:200px;
+    height:200px;
+    min-height:200px;
+    min-width:200px;
+    margin:10px;
+    
 }
 #details_anchor {
     font-size: 15px;
