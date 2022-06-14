@@ -35,7 +35,7 @@ namespace SanProject.Web
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<IEmailService, FakeEmailService>();
+            services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<IUsersService, UsersService>();
             services.AddTransient<ICitySearchService, CitySearchService>();

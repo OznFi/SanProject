@@ -30,7 +30,7 @@ namespace SanProject.Web.Controllers
         }
 
 
-        public async Task<IActionResult> HotelsSearchPage(string id)
+        public IActionResult HotelsSearchPage(string id)
         {
             AllHotelQueryDTO t=new AllHotelQueryDTO();
             t.LocationId = id;
