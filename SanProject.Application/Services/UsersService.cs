@@ -32,8 +32,8 @@ namespace SanProject.Application.Services
             {
                 Body = "Kaydiniz yapildi",
                 Subject = "Otel user kayit",
-                //ToEmail = user.Email
-                ToEmail="ozanfin@hotmail.com"
+                ToEmail = user.Email
+                //ToEmail="ozanfin@hotmail.com"
             };
             _logger.LogInformation("{@user} registered", user);
             await _emailService.SendEmailAsync(mail);
