@@ -73,7 +73,7 @@ namespace SanProject.Application.Services
         
         
         
-        //Deprecated, is already available in edit
+        //DEPRECATED, is already available in edit
         
         public async Task ActivateUser(int id)
         {

@@ -78,6 +78,7 @@ namespace SanProject.Application.Services
             
             
         }
+        //for fetching info about all hotels
         public async Task<List<HotelDetailDTO>> GetAllDetails(AllHotelQueryDTO qu)
         {
             if (tokne == null)

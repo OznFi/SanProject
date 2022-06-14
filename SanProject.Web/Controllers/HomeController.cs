@@ -44,20 +44,6 @@ namespace SanProject.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CityQuery(string quer)
-        {
-            /*
-            string t = _authenticationservice.Login().Result;
-            Token to=new Token();
-            to.token=t;*/
-            //var t=await _authenticationservice.Login();
-            //string quer = HttpContext.Request.Form["citysearch"];
-            List<CityObject> t = await _citysearchservice.Search(quer);
-
-            //return RedirectToAction("Cities", t);
-            return Ok();
-        }
-        [HttpPost]
         public async Task<IActionResult> Cities(string quer)
         {
             if((quer==null || quer=="") || quer.Length < 3)
@@ -75,6 +61,24 @@ namespace SanProject.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
+
+        // DEPRECATED //
+        [HttpPost]
+        public async Task<IActionResult> CityQuery(string quer)
+        {
+            /*
+            string t = _authenticationservice.Login().Result;
+            Token to=new Token();
+            to.token=t;*/
+            //var t=await _authenticationservice.Login();
+            //string quer = HttpContext.Request.Form["citysearch"];
+            List<CityObject> t = await _citysearchservice.Search(quer);
+
+            //return RedirectToAction("Cities", t);
+            return Ok();
         }
     }
 }
