@@ -64,6 +64,10 @@ namespace SanProject.Web.Controllers
                 {
                     model.travellers[i].address.email = "";
                 }
+                if(model.travellers[i].name==null || model.travellers[i].surname == null)
+                {
+                    return BadRequest("Fill in the name and Surname Fields properly");
+                }
             }
             ReservationDetailDTO res = await _bookingservice.FullBooking(model.offerId, model.currency, model.culture, travls);
             if (res == null)
