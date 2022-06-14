@@ -37,14 +37,6 @@ namespace SanProject.Web.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult SearchCity(string citytext)
-        {
-
-            //var client = new HttpClient();
-            //var req = client.PostAsync("http://service.stage.paximum.com/v2",);
-            return Ok();
-        }
 
         public IActionResult Privacy()
         {

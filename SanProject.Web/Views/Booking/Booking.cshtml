@@ -46,7 +46,7 @@
         <div>
             <h5>Agency</h5><br/>
             <span class="hotel_detail_info_title">Agency Name: </span><span>@(Model.agency.name)</span><br/>
-            @if (Model.agency.address.address != null)
+            @if (Model.agency.address.address != null && Model.agency.address.address!="")
             {
                 <span class="hotel_detail_info_title">Agency Address: </span><span>@(Model.agency.address.address)</span><br/>   
             }
