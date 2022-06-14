@@ -47,6 +47,47 @@ namespace SanProject.Web.Controllers
                 return RedirectToAction("Index");
             return BadRequest("User is not found");
         }
+        
+        //[HttpDelete]
+        public IActionResult SoftDelete(int id)
+        {
+            User user=_unitofwork.UsersRepository.FindUser(id);
+               
+                //user.IsDeleted = true;
+                //_context.SaveChanges();
+                _userservice.SoftDelete(user);
+                return RedirectToAction("Index");
+            
+            
+        }
+        public IActionResult Delete(int id)
+        {
+            //User user = _unitofwork.UsersRepository.FindUser(id);
+
+            //user.IsDeleted = true;
+            //_context.SaveChanges();
+            _userservice.DeleteUser(id);
+            return RedirectToAction("Index");
+        }
+        public IActionResult Registration()
+        {
+            
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Registration(User user)
+        {
+            
+           await _userservice.AddUser(user);
+
+           return RedirectToAction("Index");
+          
+        }
+
+
+
+
+
         [HttpPut]
         public IActionResult ActivateUser(int id)
         {
@@ -62,35 +103,9 @@ namespace SanProject.Web.Controllers
             return BadRequest();
             
         }
-        //[HttpDelete]
-        public IActionResult SoftDelete(int id)
-        {
-            User user=_unitofwork.UsersRepository.FindUser(id);
-               
-                //user.IsDeleted = true;
-                //_context.SaveChanges();
-                _userservice.SoftDelete(user);
-                return RedirectToAction("Index");
-            
-            
-        }
-        public IActionResult Registration()
-        {
-            
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> Registration(User user)
-        {
-            
-           await _userservice.AddUser(user);
 
-           return RedirectToAction("Index");
-            
-           // return BadRequest();
-        }
 
-        //might be placed onto some other Page
+        //might be placed onto some other Page, currently deprecated
         [HttpPost]
         public IActionResult Login(LoginUser user)
         {
