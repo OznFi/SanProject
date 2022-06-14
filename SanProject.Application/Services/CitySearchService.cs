@@ -72,6 +72,7 @@ namespace SanProject.Application.Services
                     }
                 }
             }
+            _logger.LogInformation("City results for the query "+ querys + " has been fetched" );
             return conten;
         }
         //there is a bit of redundancy but is needed at the moment
@@ -96,7 +97,6 @@ namespace SanProject.Application.Services
             var contents = await req.Content.ReadAsStringAsync();
             Root obj = JsonConvert.DeserializeObject<Root>(contents);
             List<Item> t = obj.body.items;
-            //List<FullCity.Item>conten=new List<FullCity.Item>();
             List<HotelObject> conten = new List<HotelObject>();
             if (t.Count != 0)
             {
@@ -118,6 +118,7 @@ namespace SanProject.Application.Services
                     }
                 }
             }
+            _logger.LogInformation("Hotel results for the city "+ querys + " has been fetched");
             return conten;
 
         }

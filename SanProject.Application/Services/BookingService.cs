@@ -71,32 +71,11 @@ namespace SanProject.Application.Services
 
             RootReservation searchobj = new RootReservation();
             Domain.SetReservation.Traveller traveller1 = new Domain.SetReservation.Traveller();
-            /* traveller1.travellerId = "1";traveller1.type = 1;traveller1.title = 1; traveller1.passengerType = 1;
-             traveller1.name = "Name";traveller1.surname = "Surname";traveller1.isLeader = true;traveller1.birthDate = DateTime.Parse("1990 - 10 - 10");
-             traveller1.nationality.twoLetterCode = "DE"; traveller1.identityNumber = "";
-             traveller1.passportInfo.serial = "a";traveller1.passportInfo.number = "13";traveller1.passportInfo.expireDate = DateTime.Parse("2030-01-01");
-             traveller1.passportInfo.issueDate = DateTime.Parse("2020-01-01");traveller1.passportInfo.citizenshipCountryCode = "";
-             traveller1.address.contactPhone.countryCode = "90"; traveller1.address.contactPhone.areaCode = "555";traveller1.address.contactPhone.phoneNumber = "5555555";
-             traveller1.address.email = "email@test.com"; traveller1.address.address = ""; traveller1.address.zipCode = "";
-             traveller1.address.city.id = ""; traveller1.address.city.name = ""; traveller1.address.country.id = ""; traveller1.address.country.name = "";
-             traveller1.destinationAddress =new Domain.SetReservation.DestinationAddress();
-             traveller1.orderNumber = 1; traveller1.documents = new List<object> { }; traveller1.insertFields= new List<object> { };
-             traveller1.status = 0;*/
 
             Domain.SetReservation.Traveller traveller2 = new Domain.SetReservation.Traveller();
             List<Domain.SetReservation.Traveller> tlist = new List<Domain.SetReservation.Traveller>();
 
-            /*traveller2.travellerId = "2"; traveller2.type = 1; traveller2.title = 3; traveller2.passengerType = 1;
-            traveller2.name = "SecondName"; traveller2.surname = "Surname"; traveller2.isLeader = false; traveller2.birthDate = DateTime.Parse("1990-01-01");
-            traveller2.nationality.twoLetterCode = "DE"; traveller2.identityNumber = "";
-            traveller2.passportInfo.serial = "a"; traveller2.passportInfo.number = "19"; traveller2.passportInfo.expireDate = DateTime.Parse("2030-01-01");
-            traveller2.passportInfo.issueDate = DateTime.Parse("2020-01-01"); traveller2.passportInfo.citizenshipCountryCode = "";
-            traveller2.address.contactPhone.countryCode = ""; traveller2.address.contactPhone.areaCode = ""; traveller2.address.contactPhone.phoneNumber = "";
-            traveller2.address.email = ""; traveller2.address.address = ""; traveller2.address.zipCode = "";
-            traveller2.address.city.id = ""; traveller2.address.city.name = ""; traveller2.address.country.id = ""; traveller2.address.country.name = "";
-            traveller2.destinationAddress = new Domain.SetReservation.DestinationAddress();
-            traveller2.orderNumber = 1; traveller2.documents = new List<object> { }; traveller2.insertFields = new List<object> { };
-            traveller2.status = 0;*/
+            
             List<Domain.Booking.Traveller> ta = ob.body.reservationData.travellers;
             List<Domain.SetReservation.Traveller>ts=new List<Domain.SetReservation.Traveller>();
             for (int i = 0; i < ta.Count; i++)
@@ -143,6 +122,7 @@ namespace SanProject.Application.Services
             {
                 return null;
             }
+            _logger.LogInformation(obj.body.transactionId+" numbered transaction Id generated" );
             return obj.body.transactionId;
         }
 
@@ -164,6 +144,7 @@ namespace SanProject.Application.Services
             {
                 return null;
             }
+            _logger.LogInformation(obj.body.reservationNumber+" reservation has been made");
             return obj.body.reservationNumber;
         }
 
